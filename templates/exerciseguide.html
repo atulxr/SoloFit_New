@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Initializations-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness tool which helps you to plan your diet and exercises." />
+  <meta name="keywords" content="fitness, workout, diet, calories, macros, exercise" />
+  <title>SoloFit</title>
+
+  <!--Font & Icons-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+
+  <!--Styles-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+</head>
+
+<body>
+
+  {% block content %}
+  <br>
+  <br>
+  <br>
+
+  <!--Exercise Guide-->
+  <section id="exercise-guide" class="page page-dark">
+    <h1>EXERCISE GUIDE</h1><br />
+    <p>Select an exercise to learn how to do it.</p><br />
+    <hr /><br />
+    <select id="exercise-select" aria-placeholder="Select an exercise">
+      <option value="none" selected disabled hidden>Select an exercise</option>
+      <option value="air-squat">Air Squat</option>
+      <option value="barbell-row">Barbell Row</option>
+      <option value="bench-press">Bench Press</option>
+      <option value="burpee">Burpees</option>
+      <option value="cable-cross">Cable Crossover</option>
+      <option value="cable-pullover">Cable Pullover</option>
+      <option value="calf-raise">Calf Raise</option>
+      <option value="chair-dips">Chair Dips</option>
+      <option value="clean-and-press">Clean and Press</option>
+      <option value="crunch">Crunches</option>
+      <option value="deadlift">Deadlift</option>
+      <option value="decline-pushup">Decline Pushups</option>
+      <option value="front-raise">Front Raises</option>
+      <option value="front-squat">Front Squat</option>
+      <option value="hammer-curl">Hammer Curl</option>
+      <option value="high-knee">High Knees</option>
+      <option value="incline-bench-press">Incline Bench Press</option>
+      <option value="incline-dumbbell-press">Incline Dumbbell Bench Press</option>
+      <option value="jumping-jack">Jumping Jacks</option>
+      <option value="jump-squat">Jump Squat</option>
+      <option value="lateral-raise">Lateral Raises</option>
+      <option value="lat-pulldown">Lat Pulldown</option>
+      <option value="leg-curl">Leg Curl</option>
+      <option value="leg-extension">Leg Extension</option>
+      <option value="lunge">Lunge</option>
+      <option value="muscle-up">Muscle Up</option>
+      <option value="overhead-press">Overhead Press</option>
+      <option value="overhead-tricep">Overhead Tricep Extension</option>
+      <option value="pullup">Pullup</option>
+      <option value="pushup">Pushups</option>
+      <option value="shrug">Shrugs</option>
+      <option value="skull-crusher">Skull Crusher</option>
+      <option value="sl-deadlift">SL Deadlift</option>
+      <option value="squat">Squat</option>
+      <option value="squat-clean-and-press">Squat Clean and Press</option>
+      <option value="wall-sit">Wall Sit</option>
+      <option value="z-bar-curl">Z-Bar Curl</option>
+    </select><br /><br />
+    <span class="btn btn-blue" id="show-exercise">Show</span><br /><br /><br />
+    <img id="exercise-pic" src="{% static 'img/exercise.png' %}" alt="exercise" height="360px" style="background-color: aliceblue; padding: 30px; border-radius: 20px;"/>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("show-exercise").addEventListener("click", function() {
+        const exercise = document.getElementById("exercise-select").value;
+        if (exercise !== "none") {
+          const exercisePic = document.getElementById("exercise-pic");  
+          exercisePic.src = "{% static 'img/exercises/' %}" + exercise + ".svg";
+          exercisePic.alt = exercise;
+        }
+      });
+    });
+  </script>
+
+  {% endblock %}
+
+</body>
+
+</html>

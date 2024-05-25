@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Initializations-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness tool which helps you to plan your diet and exercises." />
+  <meta name="keywords" content="fitness, workout, diet, calories, macros, exercise" />
+  <title>SoloFit</title>
+
+  <!--Font & Icons-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+
+  <!--Styles-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+  <script src="{% static 'bmicalc.js' %}"></script>
+
+
+<!-- scripts -->
+
+
+<body>
+
+  {% block content %}
+
+  <!--About-->
+  <section id="about" class="page page-dark">
+    <h1>ABOUT</h1>
+    <div class="container" style="background-image: url('{% static "img/losing-weight.jpg" %}'); background-repeat: repeat; background-size: 100%; ">
+      <p style="font-size: x-large; font-weight: 500;">
+        SoloFit helps you to improve your sports experience. Here, you can get informed about your body and your
+        health, determine the most suitable target for you, learn your calorie needs according to your goal, make an
+        exercise plan and see exercise forms accordingly. You can also learn the answers of the most popular questions
+        about fitness and contact us to get more information.
+      </p>
+    </div>
+    <hr /><br />
+    <ul style="font-size: x-large; font-weight: 500;">
+      <li>Calculate your BMI to determine your goal.</li>
+      <li>Calculate your caloric needs and macros due to your goal.</li>
+      <li>Create a workout program.</li>
+      <li>Learn exercise forms from the exercise guide.</li>
+      <li>Browse FAQ to get informed.</li>
+      <li>Contact us for your questions or suggestions.</li>
+    </ul>
+    <a href="{% url 'bmicalc' %}" class="btn btn-blue">Get Started</a>
+  </section>
+
+  {% endblock %}
+
+</body>
+
+</html>

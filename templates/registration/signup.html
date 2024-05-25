@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}"> <!-- Include your CSS file -->
+</head>
+<body>
+{% block content %}
+<!--Navbar-->
+<header>
+  <nav id="navbar">
+    <a href="{% url 'signup' %}">
+      <h2>SoloFit</h2>
+    </a>
+    <ul>
+      <li><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </nav>
+</header>
+<div style="text-align: center; min-height: 700px; background-image: url('{% static "img/losing-weight.jpg" %}'); background-repeat: repeat; background-size: 100%; background-position: center top 50px;">
+
+    <br><br><br><br><br>
+    
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s320/solofit.jpg" alt="logo" width="80" style="border-radius: 20px;">
+    <br>
+    <h2 style="color: aliceblue;">Sign Up</h2>
+    <br>
+    <div style=" max-width: 600px; margin-left: 30%; ">
+      <form method="post" style="margin: 0 auto; text-align: left; ">
+        {% csrf_token %}
+        <style>
+            /* Remove bullet points from form fields */
+            form ul {
+                max-width: 500px;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            form ul li {
+                margin-top: 5px;
+                list-style-type: none;
+                font-size: 14px;
+                text-align: left;
+                margin-bottom: 10px; /* Add space after each list item */
+            }
+        </style>
+        <div style="max-width: 500px; margin-left: 30px; ">
+            {{ form.as_ul|safe }} <!-- Wrap form fields with <div> -->
+        </div>
+        <br>
+        <div style="text-align: center;">
+          <button type="submit" class="btn btn-blue" style="font-size: ;">Sign Up</button>
+      </div>
+    </form>
+    <br>
+    <br>
+    </div>
+</div>
+
+{% endblock %}
+<br>
+</body>
+
+</html>

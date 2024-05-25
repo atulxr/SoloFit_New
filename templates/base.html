@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Initializations-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness tool which helps you to plan your diet and exercises." />
+  <meta name="keywords" content="fitness, workout, diet, calories, macros, exercise" />
+  <title>SoloFit</title>
+
+  <!--Font & Icons-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+
+  <!--Styles-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon-16x16.png">
+  <link rel="manifest" href="static/js/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+<body>
+
+  <!--Navbar-->
+  <header>
+    <nav id="navbar" >
+      <a href="{% url 'index' %}">
+        <h2>SoloFit</h2>
+      </a>
+      <ul>
+        <li><a href="{% url 'bmicalc' %}">BMI</a></li>
+        <li><a href="{% url 'caloriecalc' %}">Caloric Needs</a></li>
+        <li><a href="{% url 'workoutplan' %}">Workout Planning</a></li>
+        <li><a href="{% url 'exerciseguide' %}">Exercise Guide</a></li>
+        <li><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="dropdown">
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+  <!--Contact-->
+  <footer id="contact" class="page page-dark" style="text-align: center;">
+    <h2>CONTACT</h2><br />
+    <div class="contact-info" style="display: inline-block; margin-right: 20px;">
+      <h3 style="display: inline;">Phone:</h3>
+      <span style="display: inline; margin-left: 5px;"><a href="tel:000-000-0000"><i class="fa fa-phone"
+            aria-hidden="true"></i> 123-345-6789 </a></span>
+    </div>
+    <div class="contact-info" style="display: inline-block; margin-right: 20px;">
+      <h3 style="display: inline;">E-Mail:</h3>
+      <span style="display: inline; margin-left: 5px;"><a href="mailto:abarisyerlikaya@gmail.com"><i
+            class="fa fa-envelope" aria-hidden="true"></i> hello@solofit.com</a></span>
+    </div>
+    <div class="contact-info" style="display: inline-block; margin-right: 20px;">
+      <h3 style="display: inline;">Address:</h3>
+      <span style="display: inline; margin-left: 5px;"><a href="https://maps.app.goo.gl/MRqkMYmeLiPVHZN1A"><i
+            class="fa fa-location-arrow" aria-hidden="true"></i> ABC, Kothrud, Pune, Maharashtra
+          411038</a></span>
+    </div>
+    <br>
+    <div class="copyright" style="text-align: center;">
+      <br>
+      2024 | Designed and developed By ©SoloFit Team
+    </div>
+  </footer>
+</body>
+
+</html>

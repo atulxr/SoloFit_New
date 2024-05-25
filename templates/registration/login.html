@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!--Navbar-->
+<header>
+  <nav id="navbar"> 
+    <a href="{% url 'login' %}">
+      <h2>SoloFit</h2>
+    </a>
+    <ul>
+      <li><a href="{% url 'signup' %}">Signup</a></li>
+    </ul>
+  </nav>
+</header>
+<div style="background-image: url('{% static "img/losing-weight.jpg" %}'); background-size: cover; background-position: center; height: 80vh;">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+    <div style="width: 400px; margin: 0 auto; text-align: center;">
+        <br><br><br><br><br><br>
+        
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s320/solofit.jpg" alt="logo" width="80" style="border-radius: 20px;">
+        <br>
+        <h2 style="color: aliceblue;">Log In</h2>
+        <br>
+        <div style="text-align: center;">
+          <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-blue" >Log In</button>
+          </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
