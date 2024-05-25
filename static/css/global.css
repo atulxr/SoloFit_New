@@ -1,0 +1,507 @@
+
+/* STYLES */
+
+/* PRESETS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+form {
+  background: #191d1c;
+  color: #d9d9d9;
+  padding: 3rem 0.5rem 2rem 0.5rem;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 34px;
+  width: 87%;
+  box-shadow: 0 0 3px #000000;
+}
+
+
+input {
+  width: 90%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+select {
+  width: 90%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 0.6rem;
+  margin-right: 0.4rem;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.25rem;
+  padding: 0.6rem 2rem;
+  border-radius: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  box-shadow: 0 0 3px #000000;
+}
+
+.btn-blue {
+  background: #47798f;
+}
+
+.btn-blue:hover {
+  background: #171433;
+  border: 1px solid #177ddc;
+}
+
+.btn-dark {
+  background: #191a1d;
+}
+
+.btn-dark:hover {
+  background: #c9c9c9;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.page {
+  padding: 4rem 15% 4rem 15%;
+  text-align: center;
+}
+
+.page-dark {
+  background: #191a1d;
+  color: #ffffff;
+}
+
+.page-light {
+  background: #c9c9c9;
+  color: #000000;
+}
+
+.page-dark h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.page-light h1 {
+  color: #000000;
+  text-align: center;
+}
+
+.list-box {
+  text-align: left;
+  width: 35%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: baseline;
+}
+
+.v-container {
+  color: #141414;
+  text-shadow: 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+#bmi-result,
+
+#calorie-result {
+  padding: 0.5rem;
+  font-weight: normal;
+  background: #171433;
+  box-shadow: 0 0 4px #000000;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+
+/* Navbar */
+/* Navbar */
+#navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  background: #171433;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 4px;
+}
+
+#navbar a h2 {
+  color: #ffffff;
+  border-bottom-style: solid;
+}
+
+#navbar a h2:hover {
+  border-color: #177ddc;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centering horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+#navbar ul li {
+  padding-top: 5px;
+  margin: 10px 0.5rem 0; /* Adjust margin-top to move the list items down */
+}
+
+#navbar ul li a {
+  color: #d9d9d9;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  border-bottom-style: solid;
+  color: #ffffff;
+  border-bottom-color: #177ddc;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Style the profile picture */
+.profile-pic {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 5px; /* Add margin to the top of the profile picture */
+}
+
+
+
+/* About */
+
+#about {
+  background-color: #efefef;
+  background-size: cover;
+  background-position: center top;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  color: #f4f4f4;
+}
+
+#about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+#about h1 {
+  color: #f3f3f3;
+  margin: 1rem;
+}
+
+
+#about p {
+  color: #d9d9d9;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#about a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about ul {
+  padding-left: 155px;
+  color: #f2f2f2;
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+#about ul li::before {
+  content: "\1f87a";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #177ddc;
+  /* Change the color */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+  margin-right: 0.5em;
+}
+
+#about .btn {
+  box-shadow: 0 0 8px #000000;
+}
+
+/* BMI Calculator*/
+
+#bmi-calculator {
+  background-color: #40397d;
+  color: #e2e2e2;
+}
+
+#bmi-calculator h1{
+  color: #e2e2e2;
+}
+
+
+#bmi-calculator ul {
+  padding-left: 2rem;
+}
+
+/* Caloric Needs */
+
+#caloric-needs {
+  background-color: #40397d;
+}
+
+#calorie-form {
+  border: 2px solid #171433;
+}
+x
+#caloric-needs ul {
+  margin-left: 2rem;
+  color: #d9d9d9;
+}
+
+#male,
+#female {
+  width: 10%;
+}
+
+/* Workout Planning */
+
+#workout-planning {
+
+  background-color: #40397d;
+  color: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+#workout-planning p {
+  color: #e9e9e9;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+#workout-planning h1 {
+  text-align: center;
+  text-shadow: none;
+  color: #e9e9e9;
+}
+
+#workout-planning h2 {
+  text-align: left;
+  text-shadow: none;
+}
+
+.slide {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-size: cover;
+  background-position: center;
+
+  /* width: 48rem;
+  height: 27rem; */
+}
+
+.slide table {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 4rem auto 4rem auto;
+  width: 100;
+  font-size: 10pt;
+  border-collapse: collapse;
+  border-radius: 30px;
+}
+
+.slide table,
+th,
+td {
+  padding: 10px;
+  /* Add padding to each cell */
+  text-align: center;
+  /* Center the text within each cell */
+  border: 1px solid #ddd;
+  /* Add borders to cells */
+  border: 2px solid #7c7c7c35;
+  border-radius: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px !important;
+  height: 2px !important;
+  background: transparent !important;
+
+}
+
+/* hover effects */
+*::-webkit-scrollbar:hover {
+  width: 5px !important;
+  height: 10px !important;
+  background: transparent !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+  background-color: transparent !important;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(163, 160, 160) !important;
+  border-radius: 10px !important;
+}
+
+/* hide buttons on the scrollbar*/
+::webkit-scrollbar-button {
+  display: none !important;
+}
+
+/* hide scrollbar corner */
+::webkit-scrollbar-corner {
+  display: none !important;
+}
+
+/* hide resizer */
+::-webkit-resizer {
+  display: none !important;
+}
+
+
+/* Exercise Guide */
+#exercise-guide select{
+  background-color: #d9d9d9;
+}
+
+#exercise-guide select {
+  width: 30%;
+
+}
+
+/* FAQ */
+
+#faq {
+  background-color: #40397d;
+  color: #e7e7e7;
+  
+}
+
+#faq h1{
+  color: #e7e7e7;
+  
+}
+
+#faq .list-box {
+  background: #191a1d;
+  text-align: left;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 0 3px #000000;
+}
+
+#faq .list-box ul li {
+  color: #c9c9c9;
+  margin: 1rem 0 1rem 1rem;
+}
+
+#faq h3 {
+  color: #ffffff;
+}
+
+#faq a {
+  color: #ffffff;
+}
+
+#faq a:hover {
+  color: #000000;
+}
+
+/* Contact */
+
+#contact {
+  background-color: #171433;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+#contact a {
+  color: #d9d9d9;
+}
+
+#contact a:hover {
+  color: #177ddc;
+  text-decoration: underline;
+}
